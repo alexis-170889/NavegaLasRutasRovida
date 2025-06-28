@@ -2,10 +2,10 @@
 
 .card {
     width: 320px;
-    background-color: #1a1a1a;
+    background-color: #d5d8d3;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(20, 15, 15, 0.3);
     margin: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -27,7 +27,7 @@
 }
 
 .card-title {
-    color: #f0f0f0;
+    color: #39424d;
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 600;
@@ -35,14 +35,14 @@
 }
 
 .card-description {
-    color: #b0b0b0;
+    color: #201f2c;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 .card-price {
-    color: #ffffff;
+    color: #3a3a4e;
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 20px;
