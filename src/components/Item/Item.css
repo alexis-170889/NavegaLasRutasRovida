@@ -1,0 +1,81 @@
+/* Card styles - Black & Gray Theme */
+
+.card {
+    width: 320px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    color: #f0f0f0;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.card-description {
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-price {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-price::before {
+    content: "💰 ";
+}
+
+.card-footer {
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.card-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.card-button:hover {
+    background-color: #555;
+}
+
+.card-button:active {
+    background-color: #222;
+    transform: scale(0.98);
+}
