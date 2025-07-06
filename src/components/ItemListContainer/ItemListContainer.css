@@ -74,7 +74,7 @@
 }
 
 .card-price {
-    color: #1074e7;
+    color: #4f5761;
     font-size: 1.08rem;
     font-weight: 500;
     margin-top: 0.4rem;
@@ -87,7 +87,7 @@
 }
 
 .card-button {
-    background-color: #1074e7;
+    background-color: #4f5761;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -100,7 +100,7 @@
 }
 
 .card-button:hover {
-    background-color: #0d5db5;
+    background-color: #4f5761;
     transform: scale(1.05);
 }
 
