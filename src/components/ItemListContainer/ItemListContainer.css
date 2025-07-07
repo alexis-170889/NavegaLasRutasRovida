@@ -1,14 +1,14 @@
-/* Estilos sobrios y claros para el listado de productos */
+/* Estilos sobrios y elegantes para el listado de productos - paleta coordinada con el header */
 
 .item-list-container {
-    background-color: #f7f8fa;
+    background-color: #f7f6f3;
     padding: 2rem 0;
     min-height: 100vh;
 }
 
 .item-list-container h2 {
     text-align: center;
-    color: #222e3a;
+    color: #a28c7e;
     margin-bottom: 2rem;
     font-size: 2.1rem;
     letter-spacing: 0.5px;
@@ -25,8 +25,8 @@
 .card {
     background: #fff;
     border-radius: 16px;
-    border: 1px solid #e0e3e9;
-    box-shadow: 0 4px 18px rgba(34, 46, 58, 0.07);
+    border: 1px solid #dfd6ce;
+    box-shadow: 0 4px 18px rgba(160, 140, 126, 0.08);
     transition: box-shadow 0.3s, transform 0.3s;
     width: 290px;
     display: flex;
@@ -37,7 +37,7 @@
 }
 
 .card:hover {
-    box-shadow: 0 8px 32px rgba(34, 46, 58, 0.13);
+    box-shadow: 0 8px 32px rgba(160, 140, 126, 0.15);
     transform: translateY(-4px) scale(1.03);
 }
 
@@ -45,12 +45,12 @@
     width: 100%;
     height: 210px;
     object-fit: cover;
-    background-color: #f0f1f5;
+    background-color: #f7f6f3;
     transition: filter 0.3s;
 }
 
 .card:hover .card-image {
-    filter: brightness(0.94) contrast(1.07);
+    filter: brightness(0.96) contrast(1.04);
 }
 
 .card-content {
@@ -62,19 +62,19 @@
 }
 
 .card-title {
-    color: #28354a;
+    color: #6f5950;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .card-description {
-    color: #5b6b7a;
+    color: #a28c7e;
     font-size: 0.98rem;
     min-height: 44px;
 }
 
 .card-price {
-    color: #4f5761;
+    color: #c8b6a6;
     font-size: 1.08rem;
     font-weight: 500;
     margin-top: 0.4rem;
@@ -87,7 +87,7 @@
 }
 
 .card-button {
-    background-color: #4f5761;
+    background-color: #c8b6a6;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -96,11 +96,11 @@
     font-weight: 500;
     transition: background 0.2s, transform 0.2s;
     cursor: pointer;
-    box-shadow: 0 1px 4px rgba(16, 116, 231, 0.07);
+    box-shadow: 0 1px 4px rgba(160, 140, 126, 0.07);
 }
 
 .card-button:hover {
-    background-color: #4f5761;
+    background-color: #a28c7e;
     transform: scale(1.05);
 }
 

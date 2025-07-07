@@ -1,33 +1,29 @@
-import CardWidget from '../CardWidget/CardWidget';
-import './Header.css';
-
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
     return (
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <img src="/public/Img/PNG NEGRO LOGO MOON (2).png" alt="Logo Somos Moon" />
-                <a class="navbar-brand" href="#" ></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nosotros</a>
-                        </li>
-                    </ul>
-                </div>
+        <header className="header">
+            <div className="header-logo">
+                <Link to="/"><img src="/public/Img/PNG NEGRO LOGO MOON (2).png" alt="Logo Somos Moon" /></Link>
             </div>
-            <CardWidget/>
-        </nav>
+            <nav className="header-nav">
+                <Link to="/">Inicio</Link>
+                <Link to="/productos">Productos</Link>
+                <div className="header-categorias-dropdown">
+                    <span>Categorías</span>
+                    <div className="header-categorias-menu">
+                        <Link to="/productos/categoria/Ropa interior Mujer">Ropa interior Mujer</Link>
+                        <Link to="/productos/categoria/Boxers">Boxers</Link>
+                        <Link to="/productos/categoria/Medias">Medias</Link>
+                        <Link to="/productos/categoria/Pijamas">Pijamas</Link>
+                        <Link to="/productos/categoria/Niños">Niños</Link>
+                    </div>
+                </div>
+                <Link to="/contacto">Contacto</Link>
+            </nav>
+        </header>
     );
-};
+}
 
 export default Header;
