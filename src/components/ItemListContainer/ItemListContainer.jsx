@@ -2,7 +2,7 @@ import Item from '../Item/Item';
 import './ItemListContainer.css';
 import getProductos from '../../services/mockService';
 import { useEffect, useState } from 'react';
-import Loader from '../../Loader/Loader';
+import Loader from '/src/components/Loader/Loader';
 import { useParams } from 'react-router-dom';
 
 function ItemListContainer() {
@@ -10,25 +10,31 @@ function ItemListContainer() {
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(false);
 
+
+
     const { categoria } = useParams();
+
+    const filterProductos = (arrayProductos, category) => {
+        if (category) {
+            setProductos(
+                arrayProductos.filter(el => el.category === categoria));
+        } else {
+            setProductos(arrayProductos);
+        };
+    }
 
     useEffect(() => {
         if (allProductos.length === 0) {
             setLoading(true);
             getProductos()
-                .then( result => {
+                .then(result => {
                     setAllProductos(result);
-                    setProductos(result);
+                    setProductos(result, categoria);
                     setLoading(false);
                 })
-                .catch((err) => {alert(err)});
-        };
-        if (categoria) {
-            setProductos(
-                allProductos.filter(el => el.category === categoria)
-            );
+                .catch((err) => { alert(err) });
         } else {
-            setProductos(allProductos);
+            filterProductos(allProductos, categoria);
         }
     }, [categoria]);
 
@@ -41,6 +47,7 @@ function ItemListContainer() {
                     productos.map((elem) => (
                         <Item
                             key={elem.id}
+                            id={elem.id}
                             name={elem.name}
                             description={elem.description}
                             price={elem.price}

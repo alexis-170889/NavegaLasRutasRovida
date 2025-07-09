@@ -1,0 +1,56 @@
+.contador-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    background: #f7f6f3;
+    border-radius: 8px;
+    padding: 10px 16px;
+    border: 1px solid #e3ddd7;
+    box-shadow: 0 2px 8px rgba(160, 140, 126, 0.07);
+    margin: 12px auto 16px auto;
+    width: fit-content;
+}
+
+.contador-btn {
+    background-color: #a28c7e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    width: 32px;
+    height: 32px;
+    transition: background 0.18s, transform 0.08s;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 2px rgba(160,140,126,0.09);
+}
+
+.contador-btn:hover,
+.contador-btn:focus {
+    background: #c8b6a6;
+}
+
+.contador-btn:active {
+    background: #7b665b;
+    transform: scale(0.95);
+}
+
+.contador-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contador-cantidad {
+    margin: 0 10px;
+    min-width: 28px;
+    text-align: center;
+    font-size: 1.14rem;
+    color: #6f5950;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: none;
+}

@@ -23,6 +23,7 @@ const productos = [
         description: "Pack x3 medias tobilleras en algodón premium, varios colores.",
         price: 1500,
         img: "/public/Img/soquete 3.jpg",
+        stock: 30,
         category: "Medias"
     },
     {

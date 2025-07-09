@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom';
 import './Item.css';
 
-function Item (props) {
-    const{price, name, description, img } = props;
+function Item({ id, price, name, description, img }) {
 
     return (
         <div className="card">
@@ -9,14 +9,14 @@ function Item (props) {
                 <img src={img} className="card-image" alt={name} />
                 <div className="card-content">
                     <h3 className="card-title" >{name}</h3>
-                    <p className="card-description" >{description}</p>
                     <p className="card-price">Precio: ${price}</p>
                 </div>
-                <div className="card-footer">
-                    <button className="card-button">Agregar al carrito</button>
-                </div>
+                <Link to={`/detalle/${ id }`}>
+                    <button className="card-button">Ver Detalle</button>
+                </Link>
+                <button className="card-button">Agregar al carrito</button>
             </div>
-        </div>	  	
+        </div>
     )
-            }
-            export default Item;
+}
+export default Item;
