@@ -6,10 +6,12 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Contacto from './components/Contacto/Contacto';
 import Footer from './components/Footer/Footer';
 import ItemDetail from './components/ItemDetail/ItemDetail';
+import { ContextProvider } from './components/Context/context';
 
 
 function App() {
   return (
+    <ContextProvider>
     <BrowserRouter>
         <Header />
         <Routes>
@@ -22,6 +24,7 @@ function App() {
         </Routes>
         <Footer />
     </BrowserRouter>
+    </ContextProvider>
   );
 }
 

@@ -5,6 +5,8 @@
     align-items: center;
     padding: 1.3rem 0 0.6rem 0;
     box-shadow: 0 1px 12px rgba(160, 140, 126, 0.09);
+    position: relative;
+    z-index: 100;
 }
 
 .header-logo {
@@ -17,6 +19,14 @@
 .header-logo a {
     text-decoration: none;
     color: inherit;
+}
+
+.header-nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Centra el contenido del nav */
+    position: relative; /* Para posicionar el CardWidget */
 }
 
 .header-nav {
@@ -92,6 +102,13 @@
     transition: background 0.15s, color 0.15s;
 }
 
+.card-widget-container {
+    position: absolute;
+    right: 20px; /* Ajusta según sea necesario */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 700px) {
     .header-nav {
         flex-direction: column;
@@ -104,5 +121,15 @@
 
     .header-logo {
         font-size: 1.4rem;
+    }
+
+    .card-widget-container {
+        position: static;
+        transform: none;
+        margin-top: 0.7rem;
+    }
+
+    .header-nav-container {
+        flex-direction: column;
     }
 }

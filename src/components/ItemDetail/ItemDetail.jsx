@@ -4,22 +4,22 @@ import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import getProductos from '../../services/mockService';
 import Contador from '../Contador/Contador';
-
+import { useAppContext } from '../Context/context';
 
 
 function ItemDetail() {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const [producto, setProducto] = useState(null);
+    const [cantidad, setCantidad] = useState(1);
+    const { agregarAlCarrito } = useAppContext();
 
     useEffect(() => {
         setLoading(true);
         getProductos()
             .then(result => {
                 const product = result.find(el => el.id === id);
-                if (product) {
-                    setProducto(product);
-                }
+                setProducto(product);
                 setLoading(false);
             })
             .catch((err) => {
@@ -27,6 +27,7 @@ function ItemDetail() {
                 setLoading(false);
             });
     }, [id]);
+
     if (loading) return <Loader />;
     if (!producto) return <p>Producto no encontrado</p>;
 
@@ -37,10 +38,19 @@ function ItemDetail() {
                 <div className="card-content">
                     <h3 className="card-title">{producto.name}</h3>
                     <p className="card-description">{producto.description}</p>
-                    <p className="card-price">Precio: ${producto.price}</p>
+                    <p className="card-price">${producto.price}</p>
                 </div>
-                <button className="card-button">Agregar al carrito</button>
-                <Contador />
+                <Contador 
+                    cantidad={cantidad} 
+                    setCantidad={setCantidad} 
+                    stock={producto.stock} 
+                />
+                <button 
+                    className="card-button"
+                    onClick={() => agregarAlCarrito(producto, cantidad)}
+                >
+                    Agregar al carrito
+                </button>
                 <Link to="/productos" className="card-button">Volver</Link>
             </div>
         </div>
